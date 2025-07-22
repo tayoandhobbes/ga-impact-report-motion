@@ -1,46 +1,50 @@
-# Fade-In Up Text
+# GA Impact Report – Motion Examples
 
-This example demonstrates a smooth fade-in and upward motion for text elements using GSAP and ScrollTrigger. The animation triggers once when the element enters the viewport and resets to a clean state afterward for optimal rendering performance.
+This repo contains isolated animation and motion design examples used in the Grow America Impact Report project. Each folder showcases a single motion pattern with minimal markup, styles, and scripts to keep development and implementation clear.
 
-## Preview
+## Purpose
 
-The text fades in from below (`y: 50`) and becomes fully opaque as the user scrolls down the page.
+These examples serve as reference implementations for the developer(s) on the project. They document nuanced or complex UI motion in a way that is easy to inspect, test, and integrate into the live site.
 
-## Files
+## Structure
 
-- `index.html` – Basic markup with animated text elements
-- `style.css` – Minimal styling for layout and typography
-- `script.js` – GSAP + ScrollTrigger animation logic
+Each subfolder is a standalone example:
+
+fade-in-up-text/
+├── index.html
+├── style.css
+└── script.js
+
+You can open any folder locally in a browser or serve via VS Code’s Live Server to preview.
+
+## Current Examples
+
+- `fade-in-up-text` – Scroll-triggered fade and upward motion using GSAP
+
+## Getting Started
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/tayoandhobbes/ga-impact-report-motion
+   cd ga-impact-report-motion
+
+2.	Open any folder:
+   cd fade-in-up-text
+
+3.	Open index.html in a browser or use Live Server.
 
 ## Dependencies
+	•	GSAP
+	•	ScrollTrigger (GSAP plugin)
 
-- [GSAP](https://greensock.com/gsap/)
-- [GSAP ScrollTrigger plugin](https://greensock.com/scrolltrigger/)
+These are loaded via CDN in each example file for ease of use.
 
-Both are loaded via CDN in the HTML file.
+## Contribution
 
-## How It Works
+Feel free to add new motion examples in their own folders. Keep each example self-contained and minimal.
+	•	Name folders with dashes (e.g., parallax-hero)
+	•	Include a brief comment in script.js or a README.md if needed
 
-Each text element with the `.fade-in-up` class is targeted by GSAP:
+## License
 
-- **Initial state:** `opacity: 0`, `y: 50`
-- **Final state:** `opacity: 1`, `y: 0`
-- **Easing:** `power2.out` for natural deceleration
-- **Trigger:** When the element enters the viewport at `top 85%`
-- **Reset:** Any lingering transform is cleared after animation to ensure crisp rendering during scroll
-
-## Customization
-
-You can adjust the following parameters in `script.js`:
-
-```js
-{
-  opacity: 1,
-  y: 0,
-  duration: 1.2,
-  ease: "power2.out",
-  scrollTrigger: {
-    start: "top 85%",
-    once: true
-  }
-}
+MIT

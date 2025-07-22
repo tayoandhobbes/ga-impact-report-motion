@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wave Mask Parallax</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="spacer"></section>
+
+<section class="parallax-wrapper">
+  <div class="image-container">
+    <img src="/images/bg.jpg" alt="Background" />
+    <div class="image-overlay"></div>
+  </div>
+  <div class="foreground-mask"></div>
+</section>
+
+<!-- Add this new section as a persistent cover -->
+<div class="image-cover">
+
+    <div class="content-inner">
+    <h2>This is the next section</h2>
+    <p>With centered white text on a dark background.</p>
+  </div>
+</div>
+
+<section class="content-block">
+  <div class="content-inner">
+    <h2>This is the next section</h2>
+    <p>With centered white text on a dark background.</p>
+  </div>
+</section>
+
+<section class="spacer"></section>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script> 
+
+</body>
+</html>

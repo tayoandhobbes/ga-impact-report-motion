@@ -1,0 +1,91 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #011323;
+}
+
+section.spacer {
+  height: 100vh;
+  background: #011323;
+}
+
+.parallax-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #011323;
+}
+
+.image-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 110vh; /* Slightly taller for movement range */
+  object-fit: cover;
+  margin-top: 0;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 100vh; /* shows after pin ends */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #011323;
+  z-index: 2;
+}
+
+.foreground-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #011323;
+  z-index: 1;
+
+  mask-image: url('/images/mask.svg');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url('/images/mask.svg');
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+.content-block {
+  background-color: #011323; /* or any dark color */
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 2; /* just in case */
+  position: relative;
+}
+
+.image-cover .content-inner {
+    color: white;
+    text-align: center;
+    padding-top: 62px;
+    margin-top: -5px;
+}
+
+.content-block .content-inner {
+  max-width: 600px;
+}
+.image-cover {
+  height: 100vh;
+  background: #011323;
+  position: relative;
+  z-index: 2;
+  margin-top: -1px; /* prevent visual gap */
+}
